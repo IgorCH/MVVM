@@ -9,13 +9,13 @@ namespace _Game.Scripts
         public InventoryViewModel viewModel;
 
         public TextMeshProUGUI strengthValue;
-        public TextMeshProUGUI strengthDiff;
+        public DiffText strengthDiff;
         public TextMeshProUGUI agilityValue;
-        public TextMeshProUGUI agilityDiff;
+        public DiffText agilityDiff;
         public TextMeshProUGUI staminaValue;
-        public TextMeshProUGUI staminaDiff;
+        public DiffText staminaDiff;
         public TextMeshProUGUI wisdomValue;
-        public TextMeshProUGUI wisdomDiff;
+        public DiffText wisdomDiff;
         
         private void OnEnable()
         {
@@ -40,10 +40,10 @@ namespace _Game.Scripts
         
         private void UpdateDiffCharacteristics(Characteristics chars)
         {
-            strengthDiff.text = chars.Strength.ToString();
-            agilityDiff.text = chars.Agility.ToString();
-            staminaDiff.text = chars.Stamina.ToString();
-            wisdomDiff.text = chars.Wisdom.ToString();
+            strengthDiff.Value = chars.Strength;
+            agilityDiff.Value = chars.Agility;
+            staminaDiff.Value = chars.Stamina;
+            wisdomDiff.Value = chars.Wisdom;
         }
     }
 }

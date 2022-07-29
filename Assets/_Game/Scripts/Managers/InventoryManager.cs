@@ -60,7 +60,18 @@ namespace _Game
 
         private void UpdateCharacteristics()
         {
-            if (!string.IsNullOrEmpty(viewModel.ConfirmedItem.Value))
+            if (string.IsNullOrEmpty(viewModel.ConfirmedItem.Value))
+            {
+                if (!string.IsNullOrEmpty(viewModel.SelectedItem.Value))
+                {
+                    viewModel.CharacteristicsMainState.Value = new Characteristics();
+                    
+                    Item selectedItem = GetItemById(viewModel.SelectedItem.Value);
+                    Characteristics diff = selectedItem.Characteristics;
+                    viewModel.CharacteristicsDiffState.Value = diff;
+                }   
+            }
+            else
             {
                 Item confirmedItem = GetItemById(viewModel.ConfirmedItem.Value);
                 viewModel.CharacteristicsMainState.Value = confirmedItem.Characteristics;
