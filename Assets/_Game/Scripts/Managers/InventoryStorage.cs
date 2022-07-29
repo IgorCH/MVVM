@@ -1,11 +1,15 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace _Game.Scripts
 {
     [CreateAssetMenu(menuName = "_Game/Manager/InventoryStorage")]
     public class InventoryStorage: ScriptableObject
     {
+        [NonSerialized]
         private string SelectedItem;
+        
+        [NonSerialized]
         private string ConfirmedItem;
 
         public void SelectItem(string id)

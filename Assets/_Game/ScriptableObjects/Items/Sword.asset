@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   Id: edc67106-e86c-40c8-9fb8-c81841d62577
-  Icon: {fileID: 21300000, guid: 502e6ec05d2136a4eba34ad221331d3e, type: 3}
+  Icon: {fileID: 21300000, guid: fcca8f1f4838f334585f9b79696c650c, type: 3}
   Characteristics:
     Strength: 6
     Agility: 2
     Stamina: 4
-    Wisdom: 0
+    Wisdom: -5
